@@ -17,6 +17,9 @@ footer {
   width: 30px;
   margin-bottom: 5px;
 }
+.footer-icons:hover .footer-icons__img {
+  animation: 1.3s icons-float infinite;
+}
 
 .footer-icons {
   display: flex;
@@ -27,4 +30,16 @@ footer {
   font-weight: bold;
   margin: 10px 20px 10px 20px;
   cursor: pointer;
+}
+
+@keyframes icons-float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
