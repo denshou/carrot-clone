@@ -56,7 +56,7 @@ async def get_image(item_id):
                               SELECT image from items WHERE id={item_id}
                               """).fetchone()[0]
     
-    return Response(content=bytes.fromhex(image_bytes))
+    return Response(content=bytes.fromhex(image_bytes), media_type='image/*')
 
 
 app.mount("/", StaticFiles(directory="front", html=True), name="front")
